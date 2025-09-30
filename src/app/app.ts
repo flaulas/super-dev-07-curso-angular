@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from "./components/header/header";
 
 @Component({
-  selector: 'app-francisco',
+  selector: 'app-root',
   imports: [RouterOutlet, FormsModule, CommonModule, Header],
   templateUrl: './app.html',
   styleUrl: './app.scss'

@@ -3,11 +3,13 @@ import { Calculadora } from './components/calculadora/calculadora';
 import { ListaPessoas } from './components/lista-pessoas/lista-pessoas';
 import { ListaAlunos } from './components/lista-alunos/lista-alunos';
 import { CadastroAluno } from './components/cadastro-aluno/cadastro-aluno';
+import { Pokemons } from './components/pokemons/pokemons';
 
 export const routes: Routes = [
     { path: "calculadora", component: Calculadora },
     { path: "lista-pessoas", component: ListaPessoas },
     { path: "alunos", component: ListaAlunos },
+    { path: "pokemons", component: Pokemons },
     { path: "alunos/cadastro", component: CadastroAluno },
     { path: "alunos/editar/:id", component: CadastroAluno }
 ];

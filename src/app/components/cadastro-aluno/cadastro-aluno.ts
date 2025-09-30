@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Campo } from './components/campo/campo';
 
 interface Aluno {
   id: string;
@@ -15,7 +16,7 @@ interface Aluno {
 
 @Component({
   selector: 'app-cadastro-aluno',
-  imports: [FormsModule],
+  imports: [FormsModule, Campo],
   templateUrl: './cadastro-aluno.html',
   styleUrl: './cadastro-aluno.scss'
 })
@@ -24,6 +25,7 @@ export class CadastroAluno {
   alunos: Aluno[];
 
   nome: string = "";
+  sobrenome: string = "";
   nota1?: number;
   nota2?: number;
   nota3?: number;

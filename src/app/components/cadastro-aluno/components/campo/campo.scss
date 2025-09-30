@@ -1,0 +1,55 @@
+/* Containers dos campos */
+div {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #c4b5fd;
+    /* Roxo claro */
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+    background: #2d1b4e;
+    /* Roxo médio */
+    border: 1px solid #4c1d95;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #f5f3ff;
+    /* Texto quase branco */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #9333ea;
+    /* Roxo vivo */
+    box-shadow: 0 0 6px rgba(147, 51, 234, 0.6);
+}
+
+
+
+/* Remove setas no Chrome, Edge, Safari e Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove setas no Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.required{
+    color: #ff0000;
+}
