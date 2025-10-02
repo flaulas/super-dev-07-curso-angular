@@ -1,0 +1,18 @@
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+card {
+    transition: transform ease 0.5s;
+    background-color: #faf7f7;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba( 0, 0, 0, .10), 0 1px 1px rgba( 0, 0, 0, .06);
+}
+
+card:hover {
+    transform: scale(1.2);
+}
