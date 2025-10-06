@@ -36,7 +36,10 @@ export class CategoriaList {
       // Sucesso: substitui o array local pelos dados vindos da API.
       next: categorias => this.categorias = categorias,
       // Erro: exibe uma mensagem simples ao usuário.
-      error: erro => alert("Não foi possível carregar as categorias")
+      error: erro => {
+        alert("Não foi possível carregar as categorias");
+        console.error("Ocorreu um erro ao carregar as categorias: " + erro)
+      }
     });
   }
 
@@ -46,7 +49,10 @@ export class CategoriaList {
       // Sucesso: após deletar, atualiza a lista chamando o backend novamente.
       next: _ => this.carregarCategorias(),
       // Erro: avisa o usuário que não foi possível apagar.
-      error: erro => alert("Não foi possível apagar a categoria")
+      error: erro => {
+        alert("Não foi possível apagar a categoria")
+        console.error("Ocorreu um erro ao apagar as categoria: " + erro)
+      }
     })
   }
 }
