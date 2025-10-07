@@ -15,9 +15,9 @@ import { RouterLink } from '@angular/router';
 export class AutorList {
   autores: AutorResponse[] = [];
 
-  constructor(private autorService: AutorService){ }
+  constructor(private autorService: AutorService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.carregarAutores();
   }
 
@@ -27,6 +27,16 @@ export class AutorList {
       error: erro => {
         alert("Não foi possível carregar os autores");
         console.error("Não foi possível carregar os autores: " + erro)
+      }
+    })
+  }
+
+  apagar(id: number) {
+    this.autorService.delete(id).subscribe({
+      next: _ => this.carregarAutores(),
+      error: erro => {
+        alert("Não foi possível apagar a autor")
+        console.error("Ocorreu um erro ao apagar as autor: " + erro)
       }
     })
   }
