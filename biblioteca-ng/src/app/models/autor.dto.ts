@@ -4,3 +4,9 @@ export interface AutorResponse {
     nacionalidade: string;
     dataNascimento: string;
 }
+
+export interface AutorCadastroRequest{
+    nome: string;
+    nacionalidade: string;
+    dataNascimento: string;
+}
