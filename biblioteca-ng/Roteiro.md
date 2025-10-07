@@ -11,8 +11,25 @@
     }
     ```
 2. Criar service `autor.service.ts` dentro `src\app\services`
+
+    - Abrir o terminal na pasta `services`
+    - Executar o comando
+        `ng g service autor.service`
+    - Abrir o serviço criado `autor.service.ts`
     - Criar propriedade da URL
+        ```ts
+        export class CategoriaService {
+            url = "https://api.franciscosensaulas.com/api/v1/biblioteca/autores"
+        }
+        ```
     - Criar contrutor (com HttpClient)
+        ```ts
+        export class CategoriaService {
+            url = "https://api.franciscosensaulas.com/api/v1/biblioteca/categorias"
+
+            constructor(private httpClient: HttpClient) { }
+        }
+        ```
     - Criar o método que fará a requisição
         ```ts
         getAll(): Observable<AutorResponse[]> {
@@ -21,8 +38,8 @@
         ```
 2. Criar pasta autores dentro de `src\app\pages`
 2. Criar o componente de lista dentro de `src\app\pages\autores`
-    `ng g c list`
-    Alterar o nome da classe de `List` para `AutorList`
+    - `ng g c list`
+    - Alterar o nome da classe de `List` para `AutorList`
 2. Adicionar rota no arquivo `app.routes.ts`
     - Adicionar rota:
         ```ts
